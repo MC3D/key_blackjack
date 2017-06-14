@@ -17,18 +17,6 @@ function handValue (hand) {
 
   for(var i = 0; i < hand.length; i++) {
     switch(hand[i]) {
-      case "1":
-      case "2":
-      case "3":
-      case "4":
-      case "5":
-      case "6":
-      case "7":
-      case "8":
-      case "9":
-      case "10":
-        total += Number(hand[i]);
-        break;
       case "J":
       case "Q":
       case "K":
@@ -36,6 +24,10 @@ function handValue (hand) {
         break;
       case "A":
         aces += 1;
+        break;
+      default:
+        total += Number(hand[i]);
+        break;
     }
   }
 
