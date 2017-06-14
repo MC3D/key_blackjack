@@ -23,7 +23,7 @@ function handValue (hand) {
         total += 10;
         break;
       case "A":
-        aces += 1;
+        aces ++;
         break;
       default:
         total += Number(hand[i]);
@@ -33,7 +33,7 @@ function handValue (hand) {
 
   for(var i = 0; i < aces; i++) {
     if(total + 11 > 21) {
-      total += 1;
+      total ++;
     } else {
       total += 11
     }
@@ -41,7 +41,6 @@ function handValue (hand) {
 
   return total;
 }
-
 
 /* -----  Hints ------
 
